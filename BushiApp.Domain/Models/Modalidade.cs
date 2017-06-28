@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BushiApp.Domain.Models
 {
-    class Modalidade
+    public class Modalidade
     {
     }
 }
