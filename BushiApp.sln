@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BushiApp", "BushiApp\BushiApp.csproj", "{4C460117-0B99-40CE-8B6D-2370484EDE0D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BushiApp.Domain", "BushiApp.Domain\BushiApp.Domain.csproj", "{B1BEA95E-8160-4D21-B81B-6FDCEC23451D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4C460117-0B99-40CE-8B6D-2370484EDE0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C460117-0B99-40CE-8B6D-2370484EDE0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C460117-0B99-40CE-8B6D-2370484EDE0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C460117-0B99-40CE-8B6D-2370484EDE0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1BEA95E-8160-4D21-B81B-6FDCEC23451D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1BEA95E-8160-4D21-B81B-6FDCEC23451D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1BEA95E-8160-4D21-B81B-6FDCEC23451D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1BEA95E-8160-4D21-B81B-6FDCEC23451D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
