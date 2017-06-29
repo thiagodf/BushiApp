@@ -1,5 +1,6 @@
 ﻿using BushiApp.Domain.Models;
 using BushiApp.Infraestructure.Data.Map;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 
 namespace BushiApp.Infraestructure.Data

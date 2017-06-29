@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Data\Context\AppDataContext.cs" />
     <Compile Include="Data\Map\ModalidadeMap.cs" />
+    <Compile Include="Data\Map\ProfessorMap.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ModalidadeRepositorio.cs" />

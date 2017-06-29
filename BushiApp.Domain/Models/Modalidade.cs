@@ -8,10 +8,18 @@ namespace BushiApp.Domain.Models
 {
     public class Modalidade
     {
-        public int Id { get; set; }
+        public Modalidade() { }
 
-        public string Nome { get; set; }
+        public Modalidade(string nome, string descricao)
+        {
+            this.Nome = nome;
+            this.Descricao = descricao;
+        }
 
-        public string Descricao { get; set; }
+        public int Id { get; private set; }
+
+        public string Nome { get; private set; }
+
+        public string Descricao { get; private set; }
     }
 }

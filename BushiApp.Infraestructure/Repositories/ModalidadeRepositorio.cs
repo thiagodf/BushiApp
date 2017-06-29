@@ -10,8 +10,9 @@ namespace BushiApp.Infraestructure.Repositories
         AppDataContext _contexto = new AppDataContext();
 
         public Modalidade Get(string nome)
+
         {
-            return(_contexto.Modalidades.Where(x=> x.Nome == nome).FirstOrDefault());
+            return(_contexto.Modalidades.Where(x => x.Nome == nome).FirstOrDefault());
         }
 
         public Modalidade Get(int id)
@@ -39,7 +40,7 @@ namespace BushiApp.Infraestructure.Repositories
 
         public void Dispose()
         {
-            this.Dispose();
+            _contexto.Dispose();
         }
 
     }
