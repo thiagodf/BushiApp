@@ -8,16 +8,20 @@ namespace BushiApp.Domain.Models
 {
     public class Professor
     {
+        public Professor()
+        {
+
+        }
         public Professor(string nome, List<Modalidade> modalidades)
         {
-            this.Nome = nome;
-            this.Modalidades = modalidades;
+            this.ProNome = nome;
+            this.ModalidadesLista = modalidades;
         }
 
-        public int Id{ get; private set; }
+        public int ProId{ get; private set; }
 
-        public string Nome { get; set; }
+        public string ProNome { get; set; }
 
-        public virtual ICollection<Modalidade> Modalidades{ get; set; }
+        public virtual ICollection<Modalidade> ModalidadesLista{ get; set; }
     }
 }

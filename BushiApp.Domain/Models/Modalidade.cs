@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace BushiApp.Domain.Models
 {
@@ -12,14 +8,18 @@ namespace BushiApp.Domain.Models
 
         public Modalidade(string nome, string descricao)
         {
-            this.Nome = nome;
-            this.Descricao = descricao;
+            this.ModNome = nome;
+            this.ModDescricao = descricao;
+            ProfessorLista = new List<Professor>();
         }
 
-        public int Id { get; private set; }
+        
+        public int ModId { get; private set; }
 
-        public string Nome { get; private set; }
+        public string ModNome { get; private set; }
 
-        public string Descricao { get; private set; }
+        public string ModDescricao { get; private set; }
+
+        public virtual ICollection<Professor> ProfessorLista { get; set; }
     }
 }

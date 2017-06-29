@@ -1,11 +1,6 @@
 ﻿using BushiApp.Domain.Models;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BushiApp.Infraestructure.Data.Map
 {
@@ -15,15 +10,25 @@ namespace BushiApp.Infraestructure.Data.Map
         {
             ToTable("Professor");
 
-            Property(x => x.Id)
+            HasKey(x => x.ProId);
+
+            Property(x => x.ProId)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
-            Property(x => x.Nome)
+            Property(x => x.ProNome)
                 .HasMaxLength(60)
                 .IsRequired();
 
-            Property(x => x.Modalidades)
-                .HasMaxLength(500);
+
+            //N:N
+            HasMany(x => x.ModalidadesLista)
+                .WithMany(x => x.ProfessorLista)
+                .Map(m =>
+                {
+                    m.MapLeftKey("ProId");
+                    m.MapRightKey("ModId");
+                    m.ToTable("ProfessorModalidade");
+                });
         }
 
     }

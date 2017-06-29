@@ -1,6 +1,5 @@
 ﻿using BushiApp.Domain.Models;
 using BushiApp.Infraestructure.Data.Map;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 
 namespace BushiApp.Infraestructure.Data
@@ -16,9 +15,16 @@ namespace BushiApp.Infraestructure.Data
 
         public DbSet<Modalidade> Modalidades { get; set; }
 
+        public DbSet<Professor> Professores { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new ModalidadeMap());
+            modelBuilder.Configurations.Add(new ProfessorMap());
+
+            modelBuilder.Properties()
+              .Where(p => p.Name == p.ReflectedType.Name + "Id")
+              .Configure(p => p.IsKey());
         }
     }
 }

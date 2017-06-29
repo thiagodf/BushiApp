@@ -7,17 +7,22 @@ namespace BushiApp.Infraestructure.Repositories
 {
     public class ModalidadeRepositorio : IModalidadeRepositorio
     {
-        AppDataContext _contexto = new AppDataContext();
+        AppDataContext _contexto;
+
+        public ModalidadeRepositorio(AppDataContext _contexto)
+        {
+            this._contexto = _contexto;
+        }
 
         public Modalidade Get(string nome)
 
         {
-            return(_contexto.Modalidades.Where(x => x.Nome == nome).FirstOrDefault());
+            return(_contexto.Modalidades.Where(x => x.ModNome == nome).FirstOrDefault());
         }
 
         public Modalidade Get(int id)
         {
-            return (_contexto.Modalidades.Where(x => x.Id == id).FirstOrDefault());
+            return (_contexto.Modalidades.Where(x => x.ModId == id).FirstOrDefault());
         }
 
         public void Create(Modalidade modalidade)

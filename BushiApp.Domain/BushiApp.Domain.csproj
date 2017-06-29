@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\Repositories\IModalidadeRepositorio.cs" />
+    <Compile Include="Contracts\Repositories\IProfessorRepositorio.cs" />
     <Compile Include="Models\Modalidade.cs" />
     <Compile Include="Models\Professor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

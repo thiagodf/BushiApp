@@ -10,14 +10,16 @@ namespace BushiApp.Infraestructure.Data.Map
         {
             ToTable("Modalidade");
 
-            Property(x => x.Id)
+            HasKey(x => x.ModId);
+
+            Property(x => x.ModId)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
-            Property(x => x.Nome)
+            Property(x => x.ModNome)
                 .HasMaxLength(60)
                 .IsRequired();
 
-            Property(x => x.Descricao)
+            Property(x => x.ModDescricao)
                 .HasMaxLength(500);
         }
     }
