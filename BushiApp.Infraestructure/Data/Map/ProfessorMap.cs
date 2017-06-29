@@ -19,7 +19,6 @@ namespace BushiApp.Infraestructure.Data.Map
                 .HasMaxLength(60)
                 .IsRequired();
 
-
             //N:N
             HasMany(x => x.ModalidadesLista)
                 .WithMany(x => x.ProfessorLista)
