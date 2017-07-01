@@ -13,7 +13,6 @@ namespace BushiApp.Domain.Models
             ProfessorLista = new List<Professor>();
         }
 
-        
         public int ModId { get; private set; }
 
         public string ModNome { get; private set; }

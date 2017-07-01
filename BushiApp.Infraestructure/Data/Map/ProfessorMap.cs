@@ -24,8 +24,8 @@ namespace BushiApp.Infraestructure.Data.Map
                 .WithMany(x => x.ProfessorLista)
                 .Map(m =>
                 {
-                    m.MapLeftKey("ProId");
-                    m.MapRightKey("ModId");
+                    m.MapLeftKey("ModId");
+                    m.MapRightKey("ProId");
                     m.ToTable("ProfessorModalidade");
                 });
         }
