@@ -16,51 +16,40 @@ namespace ConsoleApp1
 
             var container = new UnityContainer();
             DependencyResolver.Resolve(container);
-            
+
             //var modalidade = new Modalidade(
             //    "Jiu-jitsu",
             //    "Arte marcial suave"
             //    );
 
-            var modalidadeRep = container.Resolve<ModalidadeRepositorio>();
-            var modalidade1 = modalidadeRep.Get("Jiu-Jitsu");
-            var modalidade2 = modalidadeRep.Get("Judô");
+            //var modalidadeRep = container.Resolve<ModalidadeRepositorio>();
+            //var modalidade1 = modalidadeRep.Get("Jiu-Jitsu");
+            //var modalidade2 = modalidadeRep.Get("Judô");
 
 
-            List<Modalidade> modalidadeLista = new List<Modalidade>();
-            modalidadeLista.Add(modalidade1);
-            modalidadeLista.Add(modalidade2);
+            //List<Modalidade> modalidadeLista = new List<Modalidade>();
+            //modalidadeLista.Add(modalidade1);
+            //modalidadeLista.Add(modalidade2);
 
-            var professorRep = container.Resolve<ProfessorRepositorio>();
-            var professor = new Professor("Thiago", modalidadeLista);
-            professorRep.Create(professor);
+            //var professorRep = container.Resolve<ProfessorRepositorio>();
+            //var professor = new Professor("Thiago", modalidadeLista);
+            //professorRep.Create(professor);
 
-            professor = professorRep.Get("Thiago");
-            //IModalidadeRepositorio modRep;
+            //professor = professorRep.Get("Thiago");
 
-            //var modsRep = modRep.Get("Jiu-Jitsu");
+            //var aluno = new Aluno(
+            //    "01827940166",
+            //    "011122929983",
+            //    "VALENTINA",
+            //    "6191381511",
+            //    "valentina@email.com");
 
-            //var modalidade = new Modalidade(
-            //    "Jiu-Jitsu",
-            //    "Arte Marcial Suave"
-            //    );
+            var alunoRepositorio = container.Resolve<AlunoRepositorio>();
+            //alunoRepositorio.Create(aluno);
 
-            //using (IModalidadeRepositorio modalidadeRep = new ModalidadeRepositorio(contexto))
-            //{
-            //    modalidadeRep.Create(modalidade);
-            //}
-
-            //using (IModalidadeRepositorio modalidadeRep = new ModalidadeRepositorio(contexto))
-            //{
-            //    var modRep = modalidadeRep.Get("Jiu-Jitsu");
-            //    List<Modalidade> modalidades = new List<Modalidade>();
-            //    modalidades.Add(modRep);
-
-            //    var professor = new Professor("Thiago", modalidades);
-            //    contexto = new AppDataContext();
-            //    IProfessorRepositorio profRep = new ProfessorRepositorio(contexto);
-            //    profRep.Create(professor);
-            //}
+            
+            var alunoTeste = alunoRepositorio.GetNome("valentina");
+            
         }
     }
 }

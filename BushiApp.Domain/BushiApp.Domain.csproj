@@ -40,9 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\Repositories\IAlunoRepositorio.cs" />
     <Compile Include="Contracts\Repositories\IModalidadeRepositorio.cs" />
     <Compile Include="Contracts\Repositories\IProfessorRepositorio.cs" />
+    <Compile Include="Enuns\TipoDocumento.cs" />
+    <Compile Include="Models\Aluno.cs" />
     <Compile Include="Models\Modalidade.cs" />
+    <Compile Include="Models\Pessoa.cs" />
+    <Compile Include="Models\PessoaFisica.cs" />
+    <Compile Include="Models\PessoaJuridica.cs" />
     <Compile Include="Models\Professor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -16,6 +16,10 @@ namespace BushiApp.Startup
 
             container.RegisterType<Professor, Professor>(new HierarchicalLifetimeManager());
             container.RegisterType<Modalidade, Modalidade>(new HierarchicalLifetimeManager());
+            container.RegisterType<Aluno, Aluno>(new HierarchicalLifetimeManager());
+            container.RegisterType<Pessoa, Pessoa>(new HierarchicalLifetimeManager());
+            container.RegisterType<PessoaFisica, PessoaFisica>(new HierarchicalLifetimeManager());
+            container.RegisterType<PessoaJuridica, PessoaJuridica>(new HierarchicalLifetimeManager());
         }
 
     }

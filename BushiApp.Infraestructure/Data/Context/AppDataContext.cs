@@ -17,10 +17,13 @@ namespace BushiApp.Infraestructure.Data
 
         public DbSet<Professor> Professores { get; set; }
 
+        public DbSet<Aluno> Alunos { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new ModalidadeMap());
             modelBuilder.Configurations.Add(new ProfessorMap());
+            modelBuilder.Configurations.Add(new AlunoMap());
 
             modelBuilder.Properties()
               .Where(p => p.Name == p.ReflectedType.Name + "Id")

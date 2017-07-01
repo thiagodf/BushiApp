@@ -8,10 +8,8 @@ namespace BushiApp.Domain.Models
 {
     public class Professor
     {
-        public Professor()
-        {
+        public Professor(){}
 
-        }
         public Professor(string nome, List<Modalidade> modalidades)
         {
             this.ProNome = nome;
