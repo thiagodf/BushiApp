@@ -16,7 +16,7 @@ namespace BushiApp.Infraestructure.Repositories
 
         public Professor Get(string nome)
         {
-            return (_contexto.Professores.Where(x => x.ProNome == nome).FirstOrDefault());
+            return (_contexto.Professores.Where(x => x.Nome == nome).FirstOrDefault());
         }
 
         public Professor Get(int id)
